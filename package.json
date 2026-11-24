@@ -1,0 +1,49 @@
+{
+  "name": "dsh-ppt-harness",
+  "version": "0.12.0",
+  "description": "在 DeepSeek Harness 浏览社区模板、规划、制作和批注可编辑 PPT",
+  "type": "module",
+  "main": "./index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./client": "./browser/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "catalog.mjs",
+    "session-state.mjs",
+    "studio.mjs",
+    "template-studio.mjs",
+    "plan-studio.mjs",
+    "storyboard.mjs",
+    "motion.mjs",
+    "style-guide.mjs",
+    "delivery.mjs",
+    "community.mjs",
+    "community_fetch.py",
+    "production.mjs",
+    "dictation.mjs",
+    "dictation.ps1",
+    "browser",
+    "media-tools.mjs",
+    "commons_media.py",
+    "cordis.patch.yml",
+    "licenses",
+    "engine"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-commands"
+      ]
+    }
+  }
+}
